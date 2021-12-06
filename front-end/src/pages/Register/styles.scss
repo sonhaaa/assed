@@ -1,0 +1,75 @@
+@use "../../variables" as v;
+
+.register-page {
+  width: 100%;
+  font-family: SamsungMedium;
+  color: v.$BLACK;
+  text-align: center;
+
+  h1 {
+    font-size: 28.4583px;
+    line-height: 40px;
+  }
+
+  // a {
+  //   font-size: 16px;
+  // }
+
+  h2 {
+    margin-top: 16px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14.2292px;
+    line-height: 18px;
+  }
+
+  &__inputField {
+    padding: 56px 272px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__left {
+      display: flex;
+      flex-direction: column;
+      padding-right: 68px;
+
+      &__input {
+        font-family: SamsungMedium;
+        width: 280px;
+        border-radius: 10px;
+        border: none;
+        background-color: v.$BLUE_100;
+        padding: 22px 32px;
+        font-size: 14.2292px;
+        line-height: 18px;
+        color: v.$BLACK;
+      }
+
+      &__input::placeholder {
+        color: v.$GREY_800;
+        font-size: 14.2292px;
+        line-height: 18px;
+      }
+
+      &__input[type="password"] {
+        font-size: 14.2292px;
+      }
+    }
+
+    &__slash {
+      height: 30px;
+      width: 12px;
+    }
+
+    &__right {
+      display: flex;
+      flex-direction: column;
+      padding-left: 68px;
+    }
+  }
+
+  &__gap {
+    height: 28px;
+  }
+}

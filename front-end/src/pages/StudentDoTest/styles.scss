@@ -1,0 +1,162 @@
+@use "../../variables" as v;
+
+.student-do-test {
+  width: 100%;
+  height: 100vh;
+  font-family: SamsungMedium;
+  // background: v.$GREY_500;
+  // border-radius: 0px;
+
+  &__student-info {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: v.$GREY_500;
+    border-radius: 0px;
+
+    &__wrapper {
+      width: 320px;
+      background: v.$WHITE;
+      padding: 24px;
+      color: v.$BLACK;
+      font-family: SamsungMedium;
+      display: flex;
+      flex-direction: column;
+
+      &__input {
+        // border-radius: 0;
+        padding: 16px 20px;
+        color: v.$BLACK;
+        border: none;
+        background: v.$BLUE_100;
+        font-family: SamsungMedium;
+        margin-bottom: 12px;
+      }
+
+      &__button {
+        margin-top: 32px;
+        padding: 16px 28px;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.5s;
+        background: linear-gradient(94.38deg, #647dee 0.73%, #7f53ac 99.95%);
+        opacity: 0.6;
+        color: v.$WHITE;
+      }
+
+      &__button:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__student-doing-test {
+    background: v.$WHITE;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+
+    &__wrapper {
+      // background: pink;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+
+      &__question-navigate {
+        margin-left: 60px;
+
+        .navigate-bar {
+          width: 236px;
+          height: 520px;
+          background: v.$GREY_300;
+          margin-top: 40px;
+
+          &__timer {
+            font-weight: 500;
+            font-size: 42.6875px;
+            line-height: 54px;
+            text-align: center;
+            color: v.$BLACK;
+            padding-top: 32px;
+          }
+
+          &__questions {
+            margin-top: 40px;
+            max-height: calc(100% - 160px);
+            overflow: auto;
+            display: grid;
+            row-gap: 8px;
+            column-gap: 8px;
+            grid-template-columns: 40px 40px 40px 40px;
+            grid-template-rows: auto;
+            margin-left: 24px;
+
+            &__wrapper {
+              width: 40px;
+              height: 40px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background: v.$WHITE;
+              position: relative;
+              cursor: pointer;
+              transition: 0.3s;
+              color: v.$BLACK;
+            }
+          }
+        }
+
+        .button-submit {
+          width: 236px;
+          height: 56px;
+          display: flex;
+          margin-top: 24px;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          color: v.$WHITE;
+          opacity: 0.7;
+          transition: 0.5s;
+          background: linear-gradient(94.38deg, #647dee 0.73%, #7f53ac 99.95%);
+        }
+
+        .button-submit:hover {
+          opacity: 1;
+        }
+      }
+
+      &__answer-field {
+        width: calc(100% - 92px);
+        height: calc(100vh - 40px - 54px);
+        margin: 40px 60px 54px 32px;
+
+        .answer-input-field {
+          // background: pink;
+          margin-top: 8px;
+          width: 100%;
+          height: calc(100vh - 226px);
+        }
+      }
+    }
+  }
+}
+
+.button-deactive {
+  width: 236px;
+  height: 56px;
+  display: flex;
+  margin-top: 24px;
+  justify-content: center;
+  align-items: center;
+  cursor: not-allowed;
+  color: v.$WHITE;
+  background: v.$GREY_500;
+}
+
+.question-done {
+  background: linear-gradient(94.38deg, #647dee 0.73%, #7f53ac 99.95%);
+  color: v.$WHITE;
+}

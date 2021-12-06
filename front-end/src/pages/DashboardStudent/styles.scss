@@ -1,0 +1,135 @@
+@use "../../variables" as v;
+
+.dashboard-student {
+  width: 100%;
+  background: v.$WHITE;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+
+  &__main {
+    padding-left: 32px;
+    padding-top: 36px;
+    padding-right: 32px;
+    width: 100%;
+
+    &__section {
+      width: 100%;
+
+      &__head {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        margin: 37px 0 20px 0;
+
+        &__title {
+          font-family: SamsungBold;
+          font-size: 17px;
+          line-height: 21px;
+          color: v.$BLACK;
+          letter-spacing: 0.04em;
+          margin-left: 28px;
+        }
+
+        p {
+          margin-top: 8px;
+          margin-left: 28px;
+          font-family: SamsungMedium;
+          font-size: 12px;
+          color: v.$GREY_700;
+        }
+      }
+
+      &__content {
+        overflow: auto;
+        height: calc(100vh - 208px);
+      }
+    }
+  }
+}
+
+.student-result-card {
+  height: 32px;
+  background: v.$GREY_300;
+  margin-bottom: 8px;
+  font-family: SamsungMedium;
+  padding: 20px 24px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+
+  &__total-scores-wrapper {
+    width: 40px;
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    height: 40px;
+    background: v.$WHITE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      font-size: 13px;
+      color: v.$BLACK;
+      margin-top: 3px;
+    }
+  }
+
+  &__name {
+    font-size: 17px;
+    color: v.$BLACK;
+  }
+
+  &__email {
+    font-size: 13px;
+    color: v.$GREY_700;
+  }
+}
+
+.question-result-card {
+  margin-bottom: 16px;
+
+  p {
+    font-size: 13px;
+    color: v.$GREY_700;
+
+    span {
+      color: v.$BLACK;
+    }
+  }
+
+  &__answer-with-scores {
+    display: flex;
+    margin-top: 4px;
+
+    &__answer {
+      width: calc(100% - 20px);
+      font-size: 13px;
+      color: v.$GREY_700;
+
+      span {
+        color: v.$BLACK;
+      }
+    }
+
+    &__scores-wrapper {
+      width: 40px;
+      margin-left: 12px;
+      height: 40px;
+      background: v.$WHITE;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &__scores {
+        color: v.$BLACK;
+        margin-top: 3px;
+      }
+    }
+  }
+}
+
+.card-expand {
+  height: auto;
+}

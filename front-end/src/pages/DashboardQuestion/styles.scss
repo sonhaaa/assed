@@ -1,0 +1,227 @@
+@use "../../variables" as v;
+
+.dashboard-question {
+  width: 100%;
+  background: v.$WHITE;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+
+  &__main {
+    padding-left: 32px;
+    padding-top: 36px;
+    padding-right: 32px;
+    width: 100%;
+
+    &__section {
+      width: 100%;
+
+      &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 24px 0 20px 0;
+
+        &__title {
+          font-family: SamsungBold;
+          font-size: 17px;
+          line-height: 21px;
+          color: v.$BLACK;
+          letter-spacing: 0.04em;
+          margin-left: 28px;
+        }
+
+        &__button {
+          width: 124px;
+          height: 46px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: linear-gradient(
+            93.1deg,
+            rgba(100, 125, 238, 0.7) 0%,
+            rgba(158, 138, 180, 0.7) 100%
+          );
+          border-radius: 10px;
+          color: v.$WHITE;
+          cursor: pointer;
+        }
+
+        &__button:hover {
+          background: linear-gradient(
+            93.1deg,
+            rgba(100, 125, 238, 1) 0%,
+            rgba(158, 138, 180, 1) 100%
+          );
+        }
+      }
+
+      &__content {
+        height: calc(100vh - 80px - 46px - 72px);
+        overflow: auto;
+      }
+
+      &__question-create {
+        height: calc(100vh - 80px - 46px - 72px);
+
+        &__question-set-create {
+          display: flex;
+          flex-wrap: wrap;
+
+          input {
+            font-family: SamsungMedium;
+            border: none;
+            width: 100%;
+            color: v.$BLACK;
+            padding-left: 28px;
+            padding-right: 28px;
+            background: v.$BLUE_100;
+            height: 48px;
+            border-radius: 10px;
+            margin-bottom: 12px;
+          }
+
+          input::placeholder {
+            color: v.$GREY_700;
+            font-size: 13px;
+          }
+        }
+
+        &__question {
+          height: calc(100% - 128px);
+          width: 100%;
+          border-radius: 10px;
+          overflow: auto;
+        }
+      }
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.add-question-button {
+  width: 100%;
+  height: 80px;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%23868686FF' stroke-width='3' stroke-dasharray='12' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+
+  p {
+    margin-top: 8px;
+    font-size: 11.3833px;
+    line-height: 14px;
+    color: v.$GREY_700;
+  }
+}
+
+.add-question-button:hover {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%23868686FF' stroke-width='3' stroke-dasharray='12' stroke-dashoffset='32' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: 10px;
+}
+
+.question-card {
+  padding: 24px;
+  background: v.$BLUE_100;
+  border-radius: 10px;
+  color: v.$BLACK;
+  margin-bottom: 12px;
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  img:nth-child(1) {
+    right: 48px;
+  }
+
+  &__question-label,
+  &__reference-answer {
+    font-size: 11.3833px;
+    line-height: 20px;
+  }
+
+  &__title {
+    font-family: SamsungBold;
+    letter-spacing: 0.04em;
+    margin-bottom: 12px;
+  }
+}
+
+.create-question-card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  background: v.$BLUE_100;
+  margin-bottom: 12px;
+
+  input {
+    font-family: SamsungMedium;
+    border: none;
+    // width: 80%;
+    color: v.$BLACK;
+    padding-left: 28px;
+    padding-right: 28px;
+    background: v.$WHITE;
+    height: 48px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+  }
+
+  input::placeholder {
+    color: v.$GREY_700;
+    font-size: 13px;
+    justify-content: flex-start;
+  }
+
+  textarea {
+    font-family: SamsungMedium;
+    border: none;
+    color: v.$BLACK;
+    padding: 14px 28px;
+    background: v.$WHITE;
+    border-radius: 10px;
+    margin-bottom: 12px;
+  }
+
+  &__button {
+    width: 118px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+      93.1deg,
+      rgba(100, 125, 238, 0.7) 0%,
+      rgba(158, 138, 180, 0.7) 100%
+    );
+    border-radius: 10px;
+    color: v.$WHITE;
+    cursor: pointer;
+
+    p {
+      font-size: 11.3833px;
+      line-height: 14px;
+      letter-spacing: 0.04em;
+      color: #ffffff;
+    }
+  }
+
+  &__button:hover {
+    background: linear-gradient(
+      93.1deg,
+      rgba(100, 125, 238, 1) 0%,
+      rgba(158, 138, 180, 1) 100%
+    );
+  }
+}
