@@ -1,0 +1,38 @@
+@use "../../variables" as v;
+
+.header {
+  display: flex;
+  width: 100%;
+  padding: 36px 0;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  font-family: SamsungMedium;
+
+  &__navbar {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    a {
+      text-decoration: none;
+      font-size: 14.2461px;
+      color: v.$BLACK;
+      line-height: 18px;
+    }
+
+    a:nth-child(2) {
+      margin-left: 56px;
+      margin-right: 56px;
+    }
+  }
+
+  &__buttonGroup {
+    display: flex;
+    margin-right: 68px;
+  }
+}

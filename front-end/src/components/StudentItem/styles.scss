@@ -1,0 +1,30 @@
+@use "../../variables" as v;
+
+.student-item {
+  display: flex;
+  margin-bottom: 14px;
+
+  &__no {
+    width: 12px;
+  }
+
+  &__email {
+    flex: 0.8;
+
+    p {
+      margin-left: 40px;
+    }
+
+    &__item {
+      font-size: 11.3833px;
+      line-height: 20px;
+      letter-spacing: 0.04em;
+      color: v.$BLACK;
+    }
+  }
+
+  &__scores {
+    flex: 0.2;
+    text-align: center;
+  }
+}

@@ -1,0 +1,27 @@
+@use "../../variables" as v;
+
+.resources-card {
+  width: 100%;
+  margin-bottom: 8px;
+  cursor: pointer;
+  padding-bottom: 8px;
+  border-radius: 10px;
+
+  &__image {
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  &__title {
+    font-size: 12.8119px;
+    line-height: 20px;
+    padding: 0px 12px 0px 12px;
+    color: v.$BLACK;
+  }
+}
+
+.resources-card:hover {
+  background: v.$GREY_500;
+}

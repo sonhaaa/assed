@@ -1,0 +1,36 @@
+@use "../../variables" as v;
+
+.question-sets-card {
+  background: v.$GREY_300;
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-bottom: 12px;
+  cursor: pointer;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__title {
+      font-size: 17.0825px;
+      line-height: 22px;
+      color: v.$BLACK;
+    }
+
+    &__date {
+      font-size: 14.2354px;
+      line-height: 18px;
+      color: v.$GREY_700;
+    }
+  }
+
+  &__info {
+    margin-top: 20px;
+    display: flex;
+    color: v.$GREY_700;
+    font-size: 14.2354px;
+    line-height: 18px;
+    justify-content: space-between;
+  }
+}

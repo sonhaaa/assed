@@ -1,0 +1,53 @@
+@use "../../variables" as v;
+
+.scores-stats__item {
+  display: flex;
+  align-items: center;
+  width: 40px;
+  flex-direction: column;
+
+  margin-right: 14px;
+
+  &__popup {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 8px;
+    opacity: 0;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+
+    &__num {
+      position: absolute;
+      z-index: 2;
+      font-size: 14.2292px;
+      letter-spacing: 0.04em;
+      color: v.$BLACK;
+      top: 8px;
+    }
+  }
+
+  &__scores {
+    margin-top: 12px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    color: v.$GREY_700;
+  }
+
+  &__col {
+    height: 160px;
+    width: 40px;
+    background: v.$GREY_500;
+    border-radius: 16px;
+  }
+
+  &__col:hover {
+    background: linear-gradient(168.36deg, v.$BLUE_500 0%, v.$PURPLE 100%);
+  }
+}

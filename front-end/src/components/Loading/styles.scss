@@ -1,0 +1,58 @@
+@use "../../variables" as v;
+
+.loading {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.7;
+  background: linear-gradient(94.38deg, v.$BLUE_500 0.73%, v.$PURPLE 99.95%);
+
+  &__wave {
+    width: 5px;
+    height: 50px;
+    background: v.$WHITE;
+    margin: 10px;
+    animation: wave 1s linear infinite;
+    border-radius: 20px;
+  }
+  &__wave:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  &__wave:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  &__wave:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+  &__wave:nth-child(5) {
+    animation-delay: 0.4s;
+  }
+  &__wave:nth-child(6) {
+    animation-delay: 0.5s;
+  }
+  &__wave:nth-child(7) {
+    animation-delay: 0.6s;
+  }
+  &__wave:nth-child(8) {
+    animation-delay: 0.7s;
+  }
+  &__wave:nth-child(9) {
+    animation-delay: 0.8s;
+  }
+  &__wave:nth-child(10) {
+    animation-delay: 0.9s;
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
