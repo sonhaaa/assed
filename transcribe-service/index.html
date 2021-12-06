@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>File Upload & FormData Example</h1>
+        <div>
+            <input type="file" id="fileInput" />
+        </div>
+
+        <h2 id="status"></h2>
+
+        <script>
+            const status = document.getElementById('status');
+
+            const fileInput = document.querySelector('#fileInput');
+
+            const uploadFile = (file) => {
+                console.log('Uploading file...');
+                const API_ENDPOINT = 'http://localhost:8888/upload-file';
+                const request = new XMLHttpRequest();
+                const formData = new FormData();
+
+                request.open('POST', API_ENDPOINT, true);
+                request.onreadystatechange = () => {
+                    if (request.readyState === 4 && request.status === 200) {
+                    }
+                };
+                formData.append('file', file);
+                request.send(formData);
+            };
+
+            // const check = (filename) => {
+            //     let url = 'http://localhost:8888/transcribe/abc' + filename;
+            //     var i = 0;
+            //     let timerId = setInterval(() => {
+            //         console.log('run');
+            //         console.log(++i);
+            //         fetch(url)
+            //             .then((response) => response.json())
+            //             .then((data) => {
+            //                 console.log(data);
+
+            //                 if (data.message !== 'IN_PROGRESS') {
+            //                     status.innerHTML = data.transcribe;
+            //                     clearInterval(timerId);
+            //                 }
+            //                 if (data.message === 'IN_PROGRESS') {
+            //                     status.innerHTML = 'IN_PROGRESS';
+            //                 }
+            //             });
+            //     }, 2000);
+            // };
+
+            fileInput.addEventListener('change', async (event) => {
+                const files = event.target.files;
+                const filename = files[0].name;
+                console.log(filename);
+                await uploadFile(files[0]);
+                await window.location.replace(
+                    `result.html?filename=${filename}`,
+                );
+                // await check(filename);
+            });
+        </script>
+    </body>
+</html>
